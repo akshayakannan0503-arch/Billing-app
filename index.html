@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Sri Maruthi Enterprises Invoice</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
+<head>
+<title>Sri Maruthi Enterprises</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
 
-	<body>
+<body>
 
-		<h2>SRI MARUTHI ENTERPRISES</h2>
-		<p>Painting, Civil, Carpentry Work</p>
-		<p>Chennai - 600068</p>
+<div class="invoice-box">
 
-		<hr>
+<h2>SRI MARUTHI ENTERPRISES</h2>
+<p>(Painting, Civil, Carpentry Work)</p>
+<p>Chennai - 600068</p>
 
-		<h3>Client Details</h3>
+<hr>
 
-		<label>Client Name</label>
-		<input type="text" id="clientName">
+<div class="details">
 
-		<label>GST No</label>
-		<input type="text" id="gst">
+<label>Bill No:</label>
+<input type="text" id="billno">
 
-		<label>Address</label>
-		<input type="text" id="address">
+<label>Date:</label>
+<input type="date" id="date">
 
-		<br><br>
+<br><br>
 
-		<table id="invoiceTable">
-			<tr>
-				<th>Date</th>
-				<th>Supplier</th>
-				<th>Invoice No</th>
-				<th>Part No</th>
-				<th>Qty</th>
-				<th>Weight</th>
-				<th>Tonnage</th>
-				<th>Rate</th>
-				<th>Total</th>
-			</tr>
+<label>Client Name:</label>
+<input type="text" id="client">
 
-			<tr>
-				<td><input type="date"></td>
-				<td><input type="text"></td>
-				<td><input type="text"></td>
-				<td><input type="text"></td>
-				<td><input type="number" class="qty"></td>
-				<td><input type="number" class="weight"></td>
-				<td><input type="number" class="tonnage"></td>
-				<td><input type="number" class="rate"></td>
-				<td class="rowTotal">0</td>
-			</tr>
+<label>GST No:</label>
+<input type="text">
 
-		</table>
+<label>Address:</label>
+<input type="text">
 
-		<br>
+</div>
 
-		<button onclick="addRow()">Add Row</button>
-		<button onclick="calculate()">Calculate</button>
+<br>
 
-		<h3 id="subtotal"></h3>
-		<h3 id="service"></h3>
-		<h3 id="sgst"></h3>
-		<h3 id="cgst"></h3>
-		<h2 id="grand"></h2>
+<table id="billTable">
 
-		<script src="js/script.js"></script>
+<tr>
+<th>S.No</th>
+<th>Date</th>
+<th>Supplier</th>
+<th>Invoice No</th>
+<th>Part No</th>
+<th>Qty</th>
+<th>Weight</th>
+<th>Tonnage</th>
+<th>Rate</th>
+<th>Total</th>
+</tr>
 
-	</body>
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+<br><br>
+
+<button onclick="calculateTotal()">Calculate</button>
+
+<div class="totals">
+
+<p id="subtotal"></p>
+<p id="service"></p>
+<p id="sgst"></p>
+<p id="cgst"></p>
+
+<h3 id="grandTotal"></h3>
+
+</div>
+
+<br>
+
+<button onclick="window.print()">Print / Save PDF</button>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
 </html>
