@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sri Maruthi Enterprises Invoice</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+
+	<body>
+
+		<h2>SRI MARUTHI ENTERPRISES</h2>
+		<p>Painting, Civil, Carpentry Work</p>
+		<p>Chennai - 600068</p>
+
+		<hr>
+
+		<h3>Client Details</h3>
+
+		<label>Client Name</label>
+		<input type="text" id="clientName">
+
+		<label>GST No</label>
+		<input type="text" id="gst">
+
+		<label>Address</label>
+		<input type="text" id="address">
+
+		<br><br>
+
+		<table id="invoiceTable">
+			<tr>
+				<th>Date</th>
+				<th>Supplier</th>
+				<th>Invoice No</th>
+				<th>Part No</th>
+				<th>Qty</th>
+				<th>Weight</th>
+				<th>Tonnage</th>
+				<th>Rate</th>
+				<th>Total</th>
+			</tr>
+
+			<tr>
+				<td><input type="date"></td>
+				<td><input type="text"></td>
+				<td><input type="text"></td>
+				<td><input type="text"></td>
+				<td><input type="number" class="qty"></td>
+				<td><input type="number" class="weight"></td>
+				<td><input type="number" class="tonnage"></td>
+				<td><input type="number" class="rate"></td>
+				<td class="rowTotal">0</td>
+			</tr>
+
+		</table>
+
+		<br>
+
+		<button onclick="addRow()">Add Row</button>
+		<button onclick="calculate()">Calculate</button>
+
+		<h3 id="subtotal"></h3>
+		<h3 id="service"></h3>
+		<h3 id="sgst"></h3>
+		<h3 id="cgst"></h3>
+		<h2 id="grand"></h2>
+
+		<script src="js/script.js"></script>
+
+	</body>
+</html>
